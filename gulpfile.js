@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var coffeeSources = ['scripts/hello.coffee'],
-    jsSources = ['scripts/*.js'],
+    jsSources = ['/resources/assets/js/*.js'],
     sassSources = ['styles/*.scss'],
     htmlSources = ['**/*.html'],
     outputDir = 'assets';
@@ -64,4 +64,4 @@ gulp.task('html', function() {
   .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch']);
+gulp.task('default', ['html', 'coffee', 'js', 'sass']);
